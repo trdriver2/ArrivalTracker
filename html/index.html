@@ -4,13 +4,19 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
   <title>ArrivalTracker</title>
+  <script type="text/javascript" src="../js/functions.js"></script>
 </head>
 <body>
     <img id="tpLogo" src="../images/tpLogo.png" alt="TalentPath Logo">
-    <div class="MainPage">
+    <form id="LoggedOut" method="POST" action="https://jsonplaceholder.typicode.com/users">
+      <input type="text" name="username" placeholder="Username"><br>
+      <input type="password" name="password" placeholder="Password"><br>
+      <button type="button" onclick="login()">Login</button>
+    </form>
+    <div class="LoggedIn">
         <button type="button">Employees</button>
         <button type="button">Options</button>
-        <button type="button">Logout</button>
+        <button type="button" onclick="logout()">Logout</button>
     </div>
 </body>
 </html>
